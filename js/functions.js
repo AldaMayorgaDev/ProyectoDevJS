@@ -1,6 +1,7 @@
 
 let id = 0; // s inicializa id para que en la funcion dibujarCard() vaya aumentando el id de card
 let arregloCards = [];
+let numReaccion = 0;
 
 // Se crear funcion que dibuja Card con JQuery
 const dibujarCard = ()=>{
@@ -36,8 +37,8 @@ const dibujarCard = ()=>{
             $("<div/>").attr("class", "devcard-footer bg-white d-flex justify-content-between align-items-center ps-3").append(
                 $("<div/>").attr("class","d-flex").append(
                     $("<div/>").attr("class","devcard-likes me-3").append(
-                        $("<img/>").attr("src","assets/svg/icon-heart.svg").attr("alt","Likes icon"),
-                        $("<spn/>").text("87 reactions")
+                        $("<img/>").attr("src","assets/svg/icon-heart.svg").attr("alt","Likes icon").attr("onclick","aumentaReaccion()"),
+                        $("<spn/>").text(`${numReaccion} reactions`) 
                     ),
                     $("<div/>").attr("class","devcard-comments").append(
                         $("<img/>").attr("src","assets/svg/iccon-comment.svg").attr("alt","Comment icon"),
@@ -66,3 +67,9 @@ function borrarCard() {
         contendorCards.removeChild(contendorCards.lastChild);
     } 
   }
+
+
+  //Funcion aumenta reaccion -Checar -
+ function aumentaReaccion (){
+    ++numReaccion;
+ } 
