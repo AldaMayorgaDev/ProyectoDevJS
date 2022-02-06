@@ -300,9 +300,9 @@
               <a href=" #" class="text-decoration-none text-black fw-bolder pe-3 ">Relevant</a>
               <a href="#" class="text-decoration-none text-secondary pe-3">Latest</a>
               <a href="#" class="text-decoration-none text-secondary">Top</a>
-              <button class="btn btn-secondary text-light" type="submit" onclick="dibujarCard()">Crear Card</button>
+              <button class="btn btn-secondary text-light" type="submit" onclick="">Crear Card</button>
               <button class="btn btn-secondary text-light" type="submit" onclick="borrarCard()">Borrar Card</button>
-              <a href="pages/formulario.html"class="text-decoration-none text-black fw-bolder pe-3 ">Crea un nuevo post</a>
+              <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalC"> Nuevo post </button>
               
             </div>
           </nav>
@@ -311,6 +311,40 @@
 
           </div>
   
+          <!-- Aqui inicia el modal -->    
+
+  <div id="modalC" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Nuevo Post</h2>
+          <button class="close" data-bs-dismiss="modal">
+            <span>&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="inputNombre" class="form-control" placeholder="Nombre">
+          <input type="text" id="inputTitulo" class="form-control" placeholder="Titulo">
+          <textarea id="inputTextArea" class="form-control" placeholder="Contenido de Post"></textarea>
+          <input type="date" id="inputFecha" class="form-control" placeholder="Fecha">
+          <input type="text" id="inputHastag" class="form-control" placeholder="#Hastags">
+          <br>
+         <!--  <input type="button" id="btnGuardar" class="btn btn-success" value="Guardar" onclick="guardar()">
+          <input type="button" id="btnModificar" class="btn btn-danger" value="Modificar">
+          <input type="button" id="btnEliminar" class="btn btn-dark" value="Eliminar">
+ -->
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-bs-dismiss="modal">Cerrar </button>
+          <button class="btn btn-primary" onclick="capturarDatos()">Guardar</button>
+          <button class="btn btn-success" onclick="">Modificar</button>
+          <button class="btn btn-danger" onclick="">Eliminar</button>
+        </div>
+    </div>
+  </div>
+  </div>
+<!-- Aqui termina el modal -->
+
         </section> 
       
       
